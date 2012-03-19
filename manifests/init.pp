@@ -25,6 +25,9 @@ class tattle ($dbhost = 'localhost',
   package {'tattle':
     ensure => present;
   }
+  package {'php':
+    ensure => present;
+  }
 
   file { '/etc/httpd/conf.d/tattle.conf':
     ensure => 'file',
